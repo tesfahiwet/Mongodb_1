@@ -1,0 +1,33 @@
+<h3>Users Data from Json PlaceHolder</h3>
+
+<table border="1" cellpadding="2" cellspacing="2">
+
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Username</td>
+        <td>Email</td>
+        <td>City</td>
+        <td>ZipCode</td>
+        <td>Latitude</td>
+        <td>Longtide</td>
+        <td>Website</td>
+    </tr>
+
+    <% userData.forEach(function (value) { %>
+    <tr>
+
+        <td><%= value.id %></td>
+        <td><%= value.name %></td>
+        <td><%= value.username %></td>
+        <td><%= value.email %></td>
+        <td><%= value.address.city %></td>
+        <td><%= value.address.zipcode %></td>
+        <td><%= value.address.geo.lat  %></td>
+        <td><%= value.address.geo.lng  %></td>
+        <td><%= value.website  %></td>
+    </tr>
+
+    <% }) %>
+
+</table>
